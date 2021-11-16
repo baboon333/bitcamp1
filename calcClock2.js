@@ -3,5 +3,5 @@ var readlineSync = require('readline-sync')
 
 var answer = readlineSync.question('지금 0시, 00분인가요?)
 
-//모르겠다...!!
+//https://www.npmjs.com/package/readline-sync
 

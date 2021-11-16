@@ -42,6 +42,10 @@ console.log(num)
 
 //console.log("after......")
 //console.log(num)
+//출력값
+//undefined
+//after......
+//10
 //----------
 //var num
 //console.log(num)
