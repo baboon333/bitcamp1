@@ -1,18 +1,24 @@
-var readlineSync = require('readline-sync');
+//4시 47분 각도
+const hour = 4
+const min = 47
 
-//난수 생성 후 보여줌
-let num = parseInt(Math.random() * 10)
-console.log(num)
+//시침 각도
+const hourD = (360 / 12) * hour
 
-//odd인지 even인지 물어봄//답을 받기 위해 readline sync모듈
-let answer = readlineSync.question('ODD? EVEN?');
+//분침 각도
+const minD = (360/60) * min
 
-//맞으면 정답 그 외는 오답
+//분침 이동에 따른 시침 이동 각도
+const plus = hourD + ((360 / 12) / 60 ) * min
 
-if (num % 2 == 1 && answer == "O") {
-    console.log("정답입니다!")
-}else if (num % 2 == 0 && answer == "E"){
-    console.log("정답입니다!")
+//시침 - 분침 각도
+const result = plus - minD
+
+//180보다 작으면 360-나온 값 //음수면 -를 곱해줘야함
+if (result > 180) {
+    console.log(360 - result)
+}else if (result < 0) {
+    console.log(result * -1)
 }else{
-    console.log("오답입니다ㅋ")
+    console.log(result)
 }
