@@ -1,4 +1,4 @@
-//prompt-sync 깔렸나 확인해본 파일
+//readline-sync 깔렸나 확인해본 파일
 var readlineSync = require('readline-sync');
 
 var userName = readlineSync.question('May I have your name? ');
